@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
 function LoginForm() {
   const [usernameOrEmail, setUsernameOrEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -32,19 +33,21 @@ function LoginForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Username or Email:
-        <input type="text" value={usernameOrEmail} onChange={(event) => setUsernameOrEmail(event.target.value)} />
-      </label>
-      <br />
-      <label>
-        Password:
-        <input type="password" value={password} onChange={(event) => setPassword(event.target.value)} />
-      </label>
-      <br />
-      <button type="submit">Login</button>
-    </form>
+    <div className="form-container">
+      <form onSubmit={handleSubmit} className="login-form">
+        <label>
+          Username or Email:
+          <input type="text" value={usernameOrEmail} onChange={(event) => setUsernameOrEmail(event.target.value)} />
+        </label>
+        <br />
+        <label>
+          Password:
+          <input type="password" value={password} onChange={(event) => setPassword(event.target.value)} />
+        </label>
+        <br />
+        <button type="submit">Login</button>
+      </form>
+    </div>
   );
 }
 

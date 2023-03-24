@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
 function RegisterForm() {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -35,25 +36,27 @@ function RegisterForm() {
   };
 
   return (
-    <form onSubmit={handleRegister}>
-      <label>
-        Username:
-        <input type="text" value={username} onChange={(event) => setUsername(event.target.value)} />
-      </label>
-      <br />
-      <label>
-        Email:
-        <input type="email" value={email} onChange={(event) => setEmail(event.target.value)} />
-      </label>
-      <br />
-      <label>
-        Password:
-        <input type="password" value={password} onChange={(event) => setPassword(event.target.value)} />
-      </label>
-      <br />
-      {errorMessage && <div>{errorMessage}</div>}
-      <button type="submit">Register</button>
-    </form>
+    <div className="form-container">
+      <form onSubmit={handleRegister} className="register-form">
+        <label>
+          Username:
+          <input type="text" value={username} onChange={(event) => setUsername(event.target.value)} />
+        </label>
+        <br />
+        <label>
+          Email:
+          <input type="email" value={email} onChange={(event) => setEmail(event.target.value)} />
+        </label>
+        <br />
+        <label>
+          Password:
+          <input type="password" value={password} onChange={(event) => setPassword(event.target.value)} />
+        </label>
+        <br />
+        {errorMessage && <div className="error-message">{errorMessage}</div>}
+        <button type="submit">Register</button>
+      </form>
+    </div>
   );
 }
 
