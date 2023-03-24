@@ -1,0 +1,33 @@
+*,*::after,*::before{
+    margin: 0;
+    box-sizing: border-box;
+
+}
+body{
+    font-size: 1.6rem;
+}
+li{
+    list-style: none;
+
+}
+a{
+    text-decoration: none;
+    color: darkgrey;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 8vh;
+    background: rgb(0,28,73);
+}
+.nav-brand{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.nav-links{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3rem;
+}
