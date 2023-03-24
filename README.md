@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# todo-app-client
+# Description
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- This is a frontend page for a todo app, it is built with react.js.
 
-## Available Scripts
+# Getting Started
 
-In the project directory, you can run:
+- In order to use this repo you need to have the following installed:
 
-### `npm start`
+ - OS [either: Windows 10+, Linux or MacOS
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Ruby - 3.1.+
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Installation
+- To use this repo on your machine requires some simple steps
 
-### `npm test`
+# Alternative One
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Open a terminal / command line interface on your computer
 
-### `npm run build`
+- Clone the repo by using the following:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+        -  git@github.com:DOROTHY2322/todo-app-client.git
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Change directory to the repo folder:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+        - cd todo-app-client.git
 
-### `npm run eject`
+- Open it in Visual Studio Code
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+         - code .
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+(Alternate Option) Open it in any editor of your choice.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Alternative Two
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- On the top right corner of this page there is a button labelled Fork.
 
-## Learn More
+- Click on that button to fork the repo to your own account.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Take on the process in Alternative One above.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Remember to replace your username when cloning.
 
-### Code Splitting
+        - git@github.com:DOROTHY2322/todo-app-client.git
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Project SetUp
 
-### Analyzing the Bundle Size
+- This project run in a Javascript libary react.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- To work with react:
+    
+        - npm install
+    
+- create a react app 
 
-### Making a Progressive Web App
+          - npx create-react-app my-app
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- change directory to your app
 
-### Advanced Configuration
+         -  cd my-app         
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+  - To run our react page
 
-### Deployment
+            - npm start  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+# Client-Side Routing
+To make use of Routing like in our case you will need to install a npm dependency for routing.
 
-### `npm run build` fails to minify
+To install the npm dependency.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+     - npm install react-router-dom
+
+
+# Technologies used
+
+- React
+
+# Authors
+
+- This project was contributed to by:
+
+- DOROTHY JEBET
+
+# License
+- MIT License
+
+- Copyright (c) 2023 DOROTHY2322
+
