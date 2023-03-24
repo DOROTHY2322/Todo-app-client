@@ -1,0 +1,51 @@
+import React, { useState } from 'react';
+
+function LoginForm() {
+  const [usernameOrEmail, setUsernameOrEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    fetch('/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ usernameOrEmail, password })
+    })
+    .then((response) => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error('Invalid username/email or password');
+      }
+    })
+    .then((data) => {
+      console.log(data);
+     
+    })
+    .catch((error) => {
+      console.error(error);
+      
+    });
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <label>
+        Username or Email:
+        <input type="text" value={usernameOrEmail} onChange={(event) => setUsernameOrEmail(event.target.value)} />
+      </label>
+      <br />
+      <label>
+        Password:
+        <input type="password" value={password} onChange={(event) => setPassword(event.target.value)} />
+      </label>
+      <br />
+      <button type="submit">Login</button>
+    </form>
+  );
+}
+
+export default LoginForm;
