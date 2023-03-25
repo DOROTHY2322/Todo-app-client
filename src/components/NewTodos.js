@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import '../NewTodos.css'
 
 function NewTodos() {
   const [title, setTitle] = useState('');
@@ -60,15 +60,15 @@ function NewTodos() {
   return (
     <div className="form-container">
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="form-group">
           <label htmlFor="title">Title:</label>
           <input type="text" id="title" value={title} onChange={(event) => setTitle(event.target.value)} />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="description">Description:</label>
           <textarea id="description" value={description} onChange={(event) => setDescription(event.target.value)} />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="priority">Priority:</label>
           <select id="priority" value={priority} onChange={(event) => setPriority(event.target.value)}>
             <option value="">Select Priority</option>
@@ -80,22 +80,22 @@ function NewTodos() {
         <div>
           <button type="submit">Create Todo</button>
         </div>
+        {errorMessage && <div className="error-message">{errorMessage}</div>}
       </form>
       <h2>Todo List</h2>
-      <ul>
+      <ul className="todo-list">
         {todos.map((todo) => (
-          <li key={todo.id}>
-            <h3>{todo.title}</h3>
-            <p>{todo.description}</p>
-            <p>Priority: {todo.priority}</p>
+          <li key={todo.id} className={`todo-item ${todo.priority}`}>
+            <div className="todo-details">
+              <h3>{todo.title}</h3>
+              <p>{todo.description}</p>
+            </div>
+            <div className="todo-priority">
+              <span>{todo.priority}</span>
+            </div>
           </li>
         ))}
       </ul>
-      {errorMessage && (
-        <div className="error-popup">
-          <p>{errorMessage}</p>
-        </div>
-      )}
     </div>
   );
 }
