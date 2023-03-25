@@ -1,9 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 
 function LoginForm() {
   const [usernameOrEmail, setUsernameOrEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch('/api/data')
+      .then(response => response.json())
+      .then(data => setData(data))
+      .catch(error => console.error(error));
+  }, []);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -15,21 +24,19 @@ function LoginForm() {
       },
       body: JSON.stringify({ usernameOrEmail, password })
     })
-    .then((response) => {
-      if (response.ok) {
-        return response.json();
-      } else {
-        throw new Error('Invalid username/email or password');
-      }
-    })
-    .then((data) => {
-      console.log(data);
-     
-    })
-    .catch((error) => {
-      console.error(error);
-      
-    });
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error('Invalid username/email or password');
+        }
+      })
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
 
   return (
@@ -47,6 +54,15 @@ function LoginForm() {
         <br />
         <button type="submit">Login</button>
       </form>
+
+      <p>Don't have an account? <Link to="/register">Create one</Link></p>
+
+      {data && (
+        <div>
+          <h2>Data:</h2>
+          <p>{data}</p>
+        </div>
+      )}
     </div>
   );
 }

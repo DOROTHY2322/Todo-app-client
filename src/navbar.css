@@ -1,45 +1,44 @@
 
-  @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Great+Vibes&family=Lora:ital,wght@1,700&family=MonteCarlo&family=Roboto:ital,wght@1,900&family=Smokum&family=Tilt+Prism&display=swap');
-
-*,*::after,*::before{
+  *{
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'josefin sans',sans-serif;
+  }
+  .hero{
+    height: 15vh;
+    width: 100%;
+    background-color: black;
+    background-position: centre;
+    background-repeat: no-repeat;
+  }
+  .nav{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.logo{
+    color: white;
+    font-size: 28px;
+}
+nav ul li{
+    list-style-type: none;
+    display:inline-block;
+    padding: 10px 20px;
 
 }
-body{
-    font-size: 1.6rem;
-    font-family: 'Abril Fatface', cursive;
-font-family: 'Great Vibes', cursive;
-font-family: 'Lora', serif;
-font-family: 'MonteCarlo', cursive;
-font-family: 'Roboto', sans-serif;
-font-family: 'Smokum', cursive;
-font-family: 'Tilt Prism', cursive;
-font-weight: bolder;
-}
-li{
-    list-style: none;
-
-}
-a{
+.nav-item{
+    color: white;
     text-decoration: none;
-    color: darkgrey;
-}
-.nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 8vh;
-    background: rgb(0,28,73);
-   
-}
-.nav-brand{
-    text-transform: uppercase;
     font-weight: bold;
+
 }
-.nav-links{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 3rem;
+.nav-item:hover{
+    color:#ea1538;
+    transition: .3s;
 }

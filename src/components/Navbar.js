@@ -4,10 +4,11 @@ import "../navbar.css";
 
 function Navbar() {
   return (
-    <nav className="nav">
-      <Link to="/" className="nav-brand">
-        TODO
-      </Link>
+    <div className="hero">
+<nav className="nav">
+<Link to="/" className="logo">
+    TODO
+  </Link>
       <ul className="nav-links">
         <li className="nav-link">
           <Link to="/todos" className="nav-item">
@@ -31,6 +32,8 @@ function Navbar() {
         </li>
       </ul>
     </nav>
+    </div>
+    
   );
 }
 
